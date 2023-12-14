@@ -16,9 +16,7 @@ const About = () => {
       {
         isLoading ? (
           <Loading />
-        ) : error ? (
-          <Error />
-        ) : (
+        ): (
           <section id='about'>
               <div className='about-header'>
                 <div className="bg"></div>

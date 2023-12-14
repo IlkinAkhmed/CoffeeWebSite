@@ -14,8 +14,6 @@ const Shop = () => {
       {
         isLoading ? (
           <Loading />
-        ) : error ? (
-          <Error />
         ) : (
           <div>
             <div className="contact-main">

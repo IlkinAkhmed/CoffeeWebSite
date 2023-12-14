@@ -38,8 +38,6 @@ const Basket = () => {
       {
         isLoading ? (
           <Loading />
-        ) : error ? (
-          <Error />
         ) : (
           <section id="basket">
       {basketArr.length === 0

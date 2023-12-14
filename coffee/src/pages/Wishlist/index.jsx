@@ -40,8 +40,6 @@ function Wishlist() {
             {
                 isLoading ? (
                     <Loading />
-                ) : error ? (
-                    <Error />
                 ) : (
                     <section id='wishlist'>
                     {favs.length === 0 ? (

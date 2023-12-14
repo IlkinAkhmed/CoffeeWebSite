@@ -18,6 +18,7 @@ import Details from "./pages/Details";
 import DetailsProvider from "./context/DetailsContext";
 import Loading from "./pages/isLoading";
 import FAQ from "./pages/FAQ";
+import Error from "./pages/Error";
 
 const App = () => {
   return (
@@ -39,6 +40,7 @@ const App = () => {
                 <Route path="/details/:itemId" element={<Details />} />
                 <Route path="/faq" element={<FAQ />} />
               </Route>
+                <Route path="*" element={<Error />} />
             </Routes>
           </DetailsProvider>
         </WishlistPovider>

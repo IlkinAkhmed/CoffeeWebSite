@@ -50,8 +50,6 @@ function Details() {
     <>
       {isLoading ? (
         <Loading />
-      ) : error ? (
-        <Error />
       ) : (
         <div className="productDetails">
           <div className="productDetails-inner">

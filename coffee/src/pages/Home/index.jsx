@@ -14,28 +14,24 @@ import Loading from "../isLoading";
 import Error from "../Error";
 
 const Home = () => {
-  const {data, isLoading, error} = useFetchData("best")
+  const { data, isLoading, error } = useFetchData("best");
   return (
     <>
-      {
-        isLoading ? (
-          <Loading />
-        ) : error ? (
-          <Error />
-        ) : (
-          <main>
-            <Header />
-            <Best />
-            <Story />
-            <Popular />
-            <CoffeeMachine />
-            <CafenaPopular />
-            <Slider />
-            <Map />
-            <News />
-          </main>
-        )
-      }
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <main>
+          <Header />
+          <Best />
+          <Story />
+          <Popular />
+          <CoffeeMachine />
+          <CafenaPopular />
+          <Slider />
+          <Map />
+          <News />
+        </main>
+      )}
     </>
   );
 };

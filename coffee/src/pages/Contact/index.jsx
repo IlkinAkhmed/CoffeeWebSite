@@ -12,8 +12,6 @@ const Contact = () => {
         {
           isLoading ? (
             <Loading />
-          ) : error ? (
-            <Error />
           ) : (
             <div>
           <div className='contact-main'>

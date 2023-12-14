@@ -20,8 +20,6 @@ const FAQ = () => {
         {
             isLoading ? (
                 <Loading />
-            ) : error ? (
-                <Error />
             ) : (
                 <>
                 <div className='contact-main'>
