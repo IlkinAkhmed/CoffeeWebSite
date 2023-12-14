@@ -1,0 +1,115 @@
+#news{
+    width: 100%;
+    background-image: url('https://xpressrow.com/html/cafena/cafena/assets/images/bg/footer-3-1.jpeg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding: 50px 150px;
+    .news-head{
+        width: 500px;
+        margin: auto;
+        text-align: center;
+        color: var(--colorMain);
+        .from{
+            padding: 5px 10px;
+            border-radius: 5px;
+            width: fit-content;
+            background-color: var(--button-bg-color);
+        }
+        h2{
+            padding: 20px 0;
+            font-size: 40px;
+        }
+    }
+    .newswrapper{
+        padding: 100px 0;
+        justify-content: center;
+        display: flex;
+        gap: 15px;
+        .newscard{
+            width: 30%;
+            border: 1px solid var(--colorMain);
+            .newsimage{
+                width: 100%;
+                overflow: hidden;
+                &:hover img{
+                    transform: scale(1.1);
+                    transition: 0.4s;
+                }
+                img{
+                    width: 100%;
+                    transition: 0.4s;
+                }
+            }
+            .newstexts{
+                padding: 20px 40px;
+                :first-child{
+                    color: var(--button-bg-color);
+                    span{
+                        color: var(--colorMain);
+                    }
+                }
+                :nth-child(2){
+                    color: var(--colorMain);
+                    font-size: 20px;
+                    padding: 15px 0;
+                }
+                .newsLink{
+                    color: var(--colorMain);
+                    cursor: pointer;
+                    color: gray;
+                    .fa-arrow-right-long{
+                        transition: 0.5s;
+                    }
+                    &:hover .fa-arrow-right-long{
+                        transform: translateX(5px);
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    #news{
+        padding: 50px 10px;
+        .news-head{
+            width: 100%;
+            h2{
+                font-size: 25px;
+            }
+        }
+        .newswrapper{
+            flex-wrap: wrap;
+            .newscard{
+                width: 100%;
+                .newstexts{
+                    padding: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    #news{
+        padding: 50px 100px;
+        .newswrapper{
+            flex-wrap: wrap;
+            .newscard{
+                width: 100%;
+            }
+        }
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #news{
+        .newswrapper{
+            flex-wrap: wrap;
+            .newscard{
+                width: 47%;
+            }
+        }
+    }
+}

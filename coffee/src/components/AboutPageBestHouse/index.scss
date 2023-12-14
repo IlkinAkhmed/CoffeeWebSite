@@ -1,0 +1,194 @@
+.coffee-house {
+    width: 100%;
+    padding: 100px 0;
+    position: relative;
+
+    .bg-img1 {
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 10%;
+    }
+
+    .bg-img2 {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        top: 10%;
+    }
+
+    .coffee-house-inner {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        z-index: 5;
+
+        .profile-img {
+            width: 50%;
+
+            .big-img {
+                width: 500px;
+                position: relative;
+                margin: auto;
+
+                img {
+                    width: 100%;
+                }
+
+                .small-img {
+                    width: 200px;
+                    height: 250px;
+                    position: absolute;
+                    bottom: 0;
+                    left: -110px;
+                    z-index: 1;
+
+                    img {
+                        transition: 0.5s;
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+
+        .coffee-house-texts {
+            padding-left: 50px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            span {
+                background-color: var(--button-bg-color);
+                color: var(--colorMain);
+                padding: 5px 10px;
+                border-radius: 8px;
+                width: fit-content;
+            }
+
+            .one-best {
+                width: 100%;
+                font-size: 60px;
+                font-family: 'Bebas Neue', sans-serif;
+                padding: 20px 0;
+            }
+
+            .mauris {
+                color: gray;
+                width: 80%;
+            }
+
+            .dummy {
+                padding: 10px 0;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                gap: 20px;
+
+                .fa-check {
+                    padding: 10px;
+                    border-radius: 5px;
+                    border: 1px solid var(--button-bg-color);
+                    color: var(--button-bg-color);
+                    cursor: pointer;
+
+                    &:hover {
+                        color: var(--colorMain);
+                        background-color: var(--button-bg-color);
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 578px) {
+    .coffee-house {
+        
+        .coffee-house-inner {
+            flex-wrap: wrap;
+            width: 100%;
+
+            .profile-img {
+                width: 100%;
+
+                .big-img {
+                    text-align: center;
+                    width: 95%;
+
+                    .small-img {
+                        left: 175px;
+                        bottom: -150px;
+                        width: 40%;
+                    }
+                }
+            }
+
+            .coffee-house-texts {
+                padding-top: 100px;
+                padding-left: 10px;
+                width: 100%;
+                .one-best{
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 579px) and (max-width: 768px) {
+    .coffee-house {
+        .coffee-house-inner {
+            flex-wrap: wrap;
+            width: 100%;
+
+            .profile-img {
+                width: 100%;
+
+                .big-img {
+                    text-align: center;
+
+                    .small-img {
+                        left: 400px;
+                    }
+                }
+            }
+
+            .coffee-house-texts {
+                padding-top: 30px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1126px) {
+    .coffee-house {
+        .coffee-house-inner {
+            flex-wrap: wrap;
+
+            .profile-img {
+                width: 100%;
+
+                .big-img {
+                    text-align: center;
+
+                    .small-img {
+                        left: 400px;
+                    }
+                }
+            }
+
+            .coffee-house-texts {
+                padding-top: 30px;
+                width: 100%;
+            }
+        }
+    }
+}

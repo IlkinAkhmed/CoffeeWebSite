@@ -1,0 +1,88 @@
+.wrapper{
+    display: flex;
+    justify-content: space-between  ;
+    gap: 15px;
+    align-items: center;
+    width: 100% !important;
+    padding: 100px 50px;
+    flex-wrap: wrap;
+    background-color: var(--main-bg-color);
+    height: fit-content;
+    .card{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 430px;
+        height: 303px;
+        color: var(--colorMain);
+        position: relative;
+        border: 1px solid gray;
+        position: relative;
+        &:hover .line{
+            width: 100%;
+            transition: 0.5s;
+        }
+
+        .line{
+            position: absolute;
+            width: 0%;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background-color: var(--button-bg-color);
+            z-index: 2;
+            transition: 0.5s;
+        }
+        
+        .texts{
+            line-height: 2;
+            padding: 50px 20px;
+            z-index: 5;
+            position: absolute;
+
+            h2 {
+                font-family: "Bebas Neue", cursive;
+                font-size: 30px;
+                font-weight: 500;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+        span{
+            color: var(--button-bg-color);
+        }
+        img{
+            position: absolute;
+            top: 0;
+            left: 0 ;
+            z-index: 0;
+        }
+
+    }
+    .img1{
+        background-image: url('https://xpressrow.com/html/cafena/cafena/assets/images/products/f-1.jpeg');
+    }
+    .img2{
+        background-image: url('https://xpressrow.com/html/cafena/cafena/assets/images/products/f-2.jpeg');
+    }
+    .img3{
+        background-image: url('https://xpressrow.com/html/cafena/cafena/assets/images/products/f-3.jpeg');
+    }
+}
+@media screen and (max-width: 578px) {
+    .wrapper{
+        padding: 100px 20px;
+        .card{
+            width: 100%;
+        }
+    }
+}
+@media screen and (min-width: 578px) and (max-width: 768px) {
+    .wrapper{
+        .card{
+            width: 48%;
+        }
+    }
+}

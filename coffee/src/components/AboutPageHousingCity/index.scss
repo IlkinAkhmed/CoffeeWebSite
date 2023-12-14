@@ -1,0 +1,71 @@
+#housCity {
+    width: 100%;
+    height: 80vh;
+    margin: 50px 0;
+    background-image: url('https://xpressrow.com/html/cafena/cafena/assets/images/bg/best-coffe-1.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+
+
+
+    .best-coffee {
+        width: 50%;
+        margin: auto;
+        border-radius: 8px;
+        border: 1px solid rgb(199, 199, 199);
+        padding: 50px 50px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        p {
+            font-size: 50px;
+            font-family: 'Bebas Neue', sans-serif;
+            width: 100%;
+        }
+
+        span {
+            color: gray;
+            padding: 20px 0;
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width: 578px) {
+    #housCity {
+        .best-coffee {
+            width: 95%;
+            padding: 10px;
+
+            p {
+                font-size: 25px;
+            }
+
+            span {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 579px) and (max-width: 768px) {
+    #housCity {
+        .best-coffee {
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #housCity {
+        .best-coffee {
+            width: 70%;
+        }
+    }
+}

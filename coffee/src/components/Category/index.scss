@@ -1,0 +1,79 @@
+.search-product {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #00000030;
+    padding: 50px 20px 50px 20px;
+
+    h2 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .showAll{
+        border: none;
+        background-color: var(--button-bg-color);
+        color: var(--colorMain);
+        padding: 5px 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover{
+            background-color: var(--colorMain);
+            color: var(--button-bg-color);
+            transition: 0.3s;
+        }
+    }
+
+    .search-svg {
+        width: 315px;
+        height: 49px;
+        border-radius: 6px;
+        border: 1px solid #00000030;
+        position: relative;
+        z-index: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        button {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 6px;
+            background: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .search-svg:hover {
+        border: 2px solid #000;
+        transition: .3s;
+        color: #000;
+    }
+
+}
+
+@media screen and (max-width: 456px) {
+    .search-svg {
+        width: 250px !important;
+        button {
+            width: 90% !important;
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .search-svg {
+        width: 165px !important;
+        button {
+            width: 100% !important;
+        }
+    }
+}

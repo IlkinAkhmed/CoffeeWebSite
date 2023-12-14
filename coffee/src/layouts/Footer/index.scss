@@ -1,0 +1,198 @@
+footer {
+    padding: 0 100px;
+    background-image: url('https://xpressrow.com/html/cafena/cafena/assets/images/bg/footer-3-1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    border-top: 1px solid var(--colorMain);
+    position: relative;
+    width: 100%;
+
+    .scroll-top {
+        color: var(--colorMain);
+        position: absolute;
+        text-align: center;
+        top: -25px;
+        left: 48%;
+    }
+
+    .footer-inner {
+        padding: 100px 100px;
+
+        .footer-details {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .phone {
+                width: 30%;
+                font-size: 20px;
+                color: var(--colorMain);
+
+                i {
+                    color: var(--button-bg-color);
+                    font-size: 30px;
+                }
+            }
+
+            .address {
+                width: 30%;
+                font-size: 20px;
+                color: var(--colorMain);
+
+                i {
+                    color: var(--button-bg-color);
+                    font-size: 30px;
+                }
+            }
+
+            .email {
+                width: 27%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                border-bottom: 1px solid var(--colorMain);
+
+                input {
+                    width: 150px;
+                    height: 30px;
+                    color: var(--colorMain);
+                    outline: none;
+                    border: none;
+                    background: transparent;
+                }
+
+                p {
+                    color: var(--colorMain);
+                }
+            }
+        }
+
+        .social-media {
+            padding-top: 50px;
+            padding-bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--colorMain);
+            border-bottom: 1px solid var(--colorMain);
+
+            .logo {
+                width: 40%;
+            }
+
+            .links {
+                width: 20%;
+                display: flex;
+                justify-content: space-between;
+                i{
+                    opacity: 0.7;
+                    border: 1px dashed var(--colorMain);
+                    border-radius: 5px;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 568px) {
+    footer{
+        padding: 0 10px;
+        .scroll-top{
+            left: 40%;
+        }
+        .footer-inner{
+            padding: 100px 20px;
+            .footer-details{
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 30px;
+                .phone{
+                    width: 80%;
+                    text-align: center;
+                }
+                .address{
+                    width: 80%;
+                    text-align: center;
+                }
+                .email{
+                    width: 100%;
+                    input{
+                        width: 100px;
+                    }
+                }
+
+            }
+            .social-media{
+                flex-wrap: wrap;
+                .logo{
+                    width: 100%;
+                }
+                .links{
+                    width: 100%;
+                    justify-content: start;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 569px) and (max-width: 768px) {
+    footer{
+        .footer-inner{
+            padding: 100px 20px;
+            .footer-details{
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 30px;
+                .phone{
+                    width: 80%;
+                    text-align: center;
+                }
+                .address{
+                    width: 80%;
+                    text-align: center;
+                }
+                .email{
+                    width: 80%;
+                }
+
+            }
+            .social-media{
+                flex-wrap: wrap;
+                .logo{
+                    width: 70%;
+                }
+                .links{
+                    width: 100%;
+                    justify-content: start;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    footer{
+        .footer-inner{
+            .footer-details{
+                flex-wrap: wrap;
+                justify-content: center;
+                .phone{
+                    width: 45%;
+                }
+                .address{
+                    width: 45%;
+                }
+                .email{
+                    justify-content: space-between;
+                    padding-top: 30px;
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

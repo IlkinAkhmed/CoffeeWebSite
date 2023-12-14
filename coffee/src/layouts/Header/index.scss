@@ -1,0 +1,248 @@
+header {
+  background-image: url("https://xpressrow.com/html/cafena/cafena/assets/images/hero/hero-img-3-1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  color: var(--colorMain);
+  padding: 200px 100px 60px 100px;
+
+  .header-inner {
+    width: 500px;
+
+    h1 {
+      font-size: 90px;
+      font-family: "Bebas Neue", cursive;
+    }
+
+    p {
+      margin: 20px 0;
+    }
+
+    .header-buttons {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      button {
+        width: 35%;
+        padding: 10px 30px;
+        font-weight: bold;
+        background-color: transparent;
+        color: var(--colorMain);
+        border: 2px solid gray;
+        margin: 50px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .beige-button {
+        background-color: var(--button-bg-color);
+      }
+    }
+  }
+
+  .links {
+    padding-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .social-media {
+      display: flex;
+      gap: 20px;
+    }
+
+    .youtube-link {
+      width: 100px;
+      text-align: center;
+      cursor: pointer;
+
+      .fa-play,
+      .fa-xmark {
+        font-size: 20px;
+        padding: 20px;
+        border-radius: 50%;
+        border: 1px solid var(--colorMain);
+
+        &:hover {
+          background-color: var(--button-bg-color);
+        }
+      }
+    }
+  }
+
+  iframe {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 600px;
+    height: 400px;
+    display: none;
+    z-index: 1;
+  }
+}
+
+.iframe-active {
+  display: block !important;
+}
+
+// @media screen and (max-width: 425px) {
+//   header {
+//     padding: 200px 20px 20px 20px;
+//     min-height: 20vh!important;
+
+//     .header-inner {
+//       width: 90%;
+
+//       h1 {
+//         font-size: 35px;
+//       }
+
+//       button {
+//         margin: 10px 10px;
+//       }
+//     }
+
+//     .links {
+//       flex-wrap: wrap;
+//       gap: 20px;
+
+//       .social-media {
+//         width: 100%;
+//         align-items: center;
+
+//         i {
+//           font-size: 12px;
+//         }
+//       }
+
+//       .youtube-link {
+//         width: 100%;
+//       }
+//     }
+
+//     iframe {
+//       width: 300px;
+//       height: 200px;
+//       left: 3%;
+//       top: 30%;
+//     }
+//   }
+// }
+
+@media screen and (max-width: 320px) {
+  header {
+    padding: 200px 20px 0 20px;
+    min-height: 20vh !important;
+
+    .header-inner {
+      width: 90%;
+
+      h1 {
+        font-size: 35px;
+      }
+      .header-buttons {
+        button {
+          width: 80% !important;
+          margin: 10px 10px;
+        }
+      }
+    }
+
+    .links {
+      flex-wrap: wrap;
+      gap: 20px;
+
+      .social-media {
+        width: 100%;
+        align-items: center;
+
+        i {
+          font-size: 12px;
+        }
+      }
+
+      .youtube-link {
+        width: 100%;
+      }
+    }
+    iframe {
+      width: 300px;
+      height: 200px;
+      left: 3%;
+      top: 30%;
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 578px) {
+  header {
+    padding: 200px 20px 0 20px;
+    min-height: 20vh !important;
+
+    .header-inner {
+      width: 90%;
+
+      h1 {
+        font-size: 35px;
+      }
+      .header-buttons {
+        button {
+          width: 50% !important;
+          margin: 10px 10px;
+        }
+      }
+    }
+
+    .links {
+      flex-wrap: wrap;
+      gap: 20px;
+
+      .social-media {
+        width: 100%;
+        align-items: center;
+
+        i {
+          font-size: 12px;
+        }
+      }
+
+      .youtube-link {
+        width: 100%;
+      }
+    }
+    iframe {
+      width: 300px;
+      height: 200px;
+      left: 15%;
+      top: 30%;
+    }
+  }
+}
+
+@media screen and (min-width: 579px) and (max-width: 768px) {
+  header {
+    iframe {
+      left: 10%;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  header {
+    iframe {
+      left: 20%;
+      top: 30%;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .header-inner {
+    button {
+      padding: 10px !important;
+    }
+  }
+}

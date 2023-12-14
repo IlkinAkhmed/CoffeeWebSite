@@ -1,0 +1,153 @@
+#best-service {
+    width: 100%;
+    padding: 50px 100px;
+
+    .service-head {
+        width: 40%;
+        padding: 20px 0;
+        margin: auto;
+        text-align: center;
+
+        span {
+            background-color: var(--button-bg-color);
+            color: var(--colorMain);
+            padding: 5px 10px;
+            border-radius: 8px;
+            width: fit-content;
+        }
+
+        p {
+            padding-top: 20px;
+            font-size: 50px;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+    }
+
+    .service-wrapper {
+        width: 90%;
+        margin: auto;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .service-card:hover .fa-solid {
+            background-color: var(--button-bg-color);
+            color: var(--colorMain) !important;
+        }
+
+        .service-card {
+            width: 31%;
+            height: fit-content;
+
+            &:hover .fa-solid {
+                background-color: var(--button-bg-color);
+                color: var(--colorMain) !important;
+                transition: 0.5s;
+            }
+
+            &:hover .bg {
+                left: 40px !important;
+            }
+
+            .card-logo {
+                position: relative;
+                width: 80px;
+                margin: auto;
+
+                .bg {
+                    position: absolute;
+                    background-color: var(--button-bg-color);
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    bottom: 0;
+                    left: -20px;
+                    opacity: 0.5;
+                    z-index: -5;
+                    transition: 0.5s;
+                }
+            }
+
+            .card-texts {
+                padding: 50px 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+
+                p {
+                    font-family: 'Bebas Neue', sans-serif;
+                    font-size: 30px;
+                }
+
+                span {
+                    color: gray;
+                    text-align: center;
+                }
+
+                .fa-solid {
+                    padding: 15px;
+                    border: 1px solid gray;
+                    color: gray;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    transition: 0.5s;
+                }
+            }
+
+
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 568px) {
+    #best-service{
+        padding: 50px 5px;
+        .service-head{
+            width: 100%;
+            p{
+                font-size: 30px;
+            }
+        }
+        .service-wrapper{
+            width: 90%;
+            flex-wrap: wrap;
+            .service-card{
+                padding-top: 20px;
+                width: 100%;
+                border-bottom: 1px solid gray;
+                .card-texts{
+                    padding: 50px 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 579px) and (max-width: 768px) {
+    #best-service{
+        padding: 50px 10px;
+        .service-wrapper{
+            width: 90%;
+            flex-wrap: wrap;
+            .service-card{
+                width: 45%;
+                .card-texts{
+                    padding: 50px 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #best-service{
+        padding: 50px 50px;
+        .service-wrapper{
+            width: 100%;
+        }
+    }
+}

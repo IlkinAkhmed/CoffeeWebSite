@@ -1,0 +1,178 @@
+#wishlist {
+    background-image: url('https://xpressrow.com/html/cafena/cafena/assets/images/bg/footer-3-1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 250px 100px;
+    color: var(--colorMain);
+
+    .empty {
+        width: 100%;
+        text-align: center;
+        h1{
+            font-size: 50px;
+        }
+        .fa-heart{
+          font-size: 200px;
+          position: relative;
+          z-index: 0;
+          opacity: 0.4;
+          .fa-xmark{
+            top: 20px;
+            left: 22%;
+            font-size: 150px;
+            color: rgb(0, 0, 0);
+            position: absolute;
+            z-index: 1;
+          }
+        }
+    }
+
+    .wishlist-inner {
+        width: 100%;
+        text-align: center;
+
+        .fa-heart {
+            font-size: 60px;
+        }
+
+        h1 {
+            font-size: 60px;
+            padding-left: 20px;
+        }
+
+        .wishWrapper {
+            width: 70%;
+            margin: auto;
+
+            .wishCard {
+                width: 80%;
+                display: flex;
+                margin: auto;
+                border-bottom: 1px solid var(--colorMain);
+                padding: 50px 0;
+                align-items: center;
+
+                .wishImg {
+                    width: 20%;
+                    text-align: center;
+                    border-right: 1px solid var(--colorMain);
+
+                }
+
+                .wishTexts {
+                    width: 60%;
+                    text-align: left;
+                    padding-left: 35px;
+
+                    span {
+                        font-weight: 500;
+                        color: #c7a17a;
+                        font-size: 20px;
+                    }
+
+                    p {
+                        font-weight: 500;
+                        font-size: 24px;
+                    }
+
+                }
+
+                .fa-trash-can {
+                    padding: 0 20px;
+                    cursor: pointer;
+                    transition: 0.5s;
+
+                    &:hover {
+                        transform: scale(1.2);
+                        transition: 0.5s;
+                    }
+                }
+
+                button {
+                    width: 20%;
+                    padding: 10px 0;
+                    background-color: var(--button-bg-color);
+                    border: none;
+                    color: var(--colorMain);
+                    border-radius: 8px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: var(--colorMain);
+                        color: var(--button-bg-color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media  screen  and (max-width: 426px) {
+    #wishlist{
+        padding: 200px 10px;
+    }
+    .wishWrapper{
+        width: 100%!important;
+    }
+    .wishCard{
+        width: 100%!important;
+        flex-wrap: wrap;
+        justify-content: center;
+        .wishTexts{
+            width: 80%!important;
+            font-size: 10px!important;
+        }
+    }
+    button{
+        width: 28%!important;
+    }
+}
+
+
+@media  screen and (min-width: 427px) and (max-width: 568px) {
+    #wishlist{
+        padding: 200px 10px;
+    }
+    .wishWrapper{
+        width: 100%!important;
+    }
+    .wishCard{
+        width: 100%!important;
+        flex-wrap: wrap;
+        justify-content: center;
+        .wishTexts{
+            width: 80%!important;
+        }
+    }
+}
+
+@media  screen and (min-width: 569px) and (max-width: 768px) {
+    .wishWrapper{
+        width: 100%!important;
+    }
+    .wishCard{
+        width: 100%!important;
+    }
+}
+
+@media  screen and (min-width: 769px) and (max-width: 1024px) {
+    .wishWrapper{
+        width: 90%!important;
+    }
+    .wishCard{
+        width: 100%!important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #wishlist{
+        .empty{
+            h1{
+            font-size: 30px;
+            }
+        }
+    }
+}

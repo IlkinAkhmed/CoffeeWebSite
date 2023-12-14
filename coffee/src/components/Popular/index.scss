@@ -1,0 +1,152 @@
+#popularMenu {
+    width: 100%;
+    background-color: var(--main-bg-color);
+    padding: 50px 0;
+
+    .head-texts {
+        width: 100%;
+        text-align: center;
+        color: var(--colorMain);
+        line-height: 1.5;
+
+        span {
+            background-color: var(--button-bg-color);
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
+        h2 {
+            font-size: 40px;
+            margin-top: 20px;
+            color: #fff;
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: auto;
+
+        .popularCard4 {
+            width: 45%;
+            border: 1px solid gray;
+            position: relative;
+            border-radius: 5px;
+            z-index: 0;
+            color: var(--colorMain);
+
+            &:hover .bg-animation {
+                width: 100%;
+                transition: 0.5s;
+            }
+
+            .bg-animation {
+                width: 0%;
+                height: 100%;
+                background-color: rgb(79, 79, 79);
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: 0.5s;
+                z-index: 0;
+            }
+
+            img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                position: absolute;
+                top: 15px;
+                left: -30px;
+                z-index: 1;
+            }
+
+            .details {
+                padding: 30px 40px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 1;
+
+                h3 {
+                    position: relative;
+                    color: #fff;
+
+                    &:hover .name-line {
+                        width: 100%;
+                        transition: 0.5s;
+                    }
+                }
+
+                p {
+                    color: var(--button-bg-color);
+                    z-index: 1;
+                    font-weight: bold;
+                }
+
+                .name-line {
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 0%;
+                    background-color: var(--second-bg-color);
+                    height: 3px;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 578px) {
+    #popularMenu {
+        .head-texts {
+            h2 {
+                font-size: 30px;
+            }
+        }
+
+        .wrapper {
+            gap: 50px;
+            width: 95%;
+
+            .popularCard4 {
+                width: 100%;
+
+                img {
+                    top: -30px;
+                    left: 40%;
+                }
+
+                .details {
+                    padding: 50px 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 579px) and (max-width: 1024px) {
+    #popularMenu {
+        .wrapper {
+
+            // gap: 50px;
+            .popularCard4 {
+                width: 48%;
+
+                img {
+                    top: -30px;
+                    left: 40%;
+                }
+
+                .details {
+                    padding: 50px 10px;
+                }
+            }
+        }
+    }
+}

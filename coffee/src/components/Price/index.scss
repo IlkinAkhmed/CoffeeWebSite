@@ -1,0 +1,67 @@
+  .search-product {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #00000030;
+    padding: 50px 20px 50px 20px;
+
+    h2 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .slidecontainer {
+        width: 90%; /* Width of the outside container */
+      }
+      
+      input {
+        -webkit-appearance: none;  /* Override default CSS styles */
+        appearance: none;
+        width: 100%; /* Full-width */
+        height: 7px; /* Specified height */ /* Grey background */
+        outline: none; /* Remove outline */
+        opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+        -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+        transition: opacity .2s;
+      }
+      
+      /* Mouse-over effects */
+      input:hover {
+        opacity: 1; /* Fully shown on mouse-over */
+      }
+      
+      /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+      input::-webkit-slider-thumb {
+        -webkit-appearance: none; /* Override default look */
+        appearance: none;
+        width: 10px; /* Set a specific slider handle width */
+        height: 25px; /* Slider handle height */
+        background: #c7a17a; /* Green background */
+        cursor: pointer; /* Cursor on hover */
+      }
+      
+      input::-moz-range-thumb {
+        width: 10px; /* Set a specific slider handle width */
+        height: 25px; /* Slider handle height */
+        background: #c7a17a; /* Green background */
+        cursor: pointer; /* Cursor on hover */
+      }
+      
+      .price {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            width: 72px;
+            height: 26px;
+            border-radius: 6px;
+            border: 1px solid gray;
+            background: none;
+            font-size: 14px;
+        }
+      }
+
+}

@@ -1,0 +1,137 @@
+.productDetails {
+    background-image: url('https://xpressrow.com/html/cafena/cafena/assets/images/bg/footer-3-1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    // height: 100vh;
+    width: 100%;
+    padding: 300px 200px;
+    color: var(--colorMain);
+    font-size: 20px;
+
+    .productDetails-inner {
+        display: flex;
+        width: 80%;
+        margin: auto;
+        border-bottom: 1px solid var(--colorMain);
+        padding-bottom: 30px;
+
+        .details-img {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 60%;
+            }
+        }
+
+        .details-texts {
+            width: 70%;
+            
+            .fa-star {
+                color: var(--button-bg-color);
+            }
+
+            .description {
+                width: 100%;
+                padding: 20px 0;
+            }
+
+            .details-qty {
+                display: flex;
+                align-items: center;
+
+                gap: 20px;
+
+                input {
+                    width: 80px;
+                    height: 40px;
+                    color: var(--colorMain);
+                    background-color: transparent;
+                    border-color: white;
+                    outline: none;
+                    padding: 5px;
+                    border-radius: 6px;
+                }
+
+                button {
+                    cursor: pointer;
+                    padding: 10px 20px;
+                    background-color: var(--button-bg-color);
+                    border-radius: 7px;
+                    border: none;
+                    transition: 0.5s;
+                    &:hover{
+                        color: var(--button-bg-color);
+                        background-color: var(--colorMain);
+                        transition: 0.5s;
+                    }
+                }
+            }
+
+            .det-categ,
+            .det-sku,
+            .det-brand {
+                padding: 5px 0;
+                width: 300px;
+                justify-content: space-between;
+                display: flex;
+                margin-top: 10px;
+                font-size: 16px;
+            }
+        }
+
+    }
+}
+@media screen and (max-width: 578px) {
+    .productDetails{
+        padding: 200px 20px;
+        .productDetails-inner{
+            padding: 10px 0;
+            border-top: 1px solid gray;
+            width: 100%;
+            flex-wrap: wrap;
+            .details-img{
+                width: 100%;
+                text-align: center;
+                img{
+                    width: 40%;
+                }
+            }
+            .details-texts{
+                width: 100%;
+                h1{
+                    font-size: 25px;
+                }
+                .details-qty{
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    button{
+                        width: 70%!important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 579px) and (max-width: 768px) {
+    .productDetails{
+        padding: 200px 20px;
+        .productDetails-inner{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .productDetails{
+        padding: 200px 100px;
+        .productDetails-inner{
+            width: 100%;
+        }
+    }
+}

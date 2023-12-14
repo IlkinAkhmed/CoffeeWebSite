@@ -1,0 +1,65 @@
+.loading-main-container {
+    width: 100%;
+    height: 100vh;
+    padding-top: 250px;
+
+    .loading-main {
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .cafena-loading {
+        font-size: 150px;
+        color: #000;
+        margin-top: 40px;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 500;
+}
+
+    /* HTML: <div class="loader"></div> */
+.loader {
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    aspect-ratio: 1;
+    display: grid;
+    border: 4px solid #0000;
+    border-radius: 50%;
+    border-color: #ccc #0000;
+    animation: l16 1.7s infinite linear;
+  }
+  .loader::before,
+  .loader::after {    
+    content: "";
+    grid-area: 1/1;
+    margin: 2px;
+    border: inherit;
+    border-radius: 50%;
+  }
+  .loader::before {
+    border-color: #c7a17a #0000;
+    animation: inherit; 
+    animation-duration: 1.1s;
+    animation-direction: reverse;
+  }
+  .loader::after {
+    margin: 8px;
+  }
+  @keyframes l16 { 
+    100%{transform: rotate(1turn)}
+  }
+}
+
+@media screen and (max-width: 390px) {
+
+  .loading-main {
+    width: 270px;
+  }
+    .cafena-loading {
+      font-size: 110px !important;
+      width: 270px;
+      margin: 20px auto;
+    }
+}
