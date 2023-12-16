@@ -6,7 +6,7 @@ import { searchContext } from '../../context/searchContext';
 
 const Product = () => {
   const {inputValue,category,sliderValue} = useContext(searchContext)
-  const { data, isLoading, error } = useFetchData("products");
+  const { data } = useFetchData("cafenaproducts");
   console.log(data);
   return (
     <div className='products-main-container'>
@@ -17,7 +17,7 @@ const Product = () => {
           .filter((x)=>x.name.trim().toLowerCase().includes(inputValue.trim().toLowerCase()))
           .map((product) => {
             return (
-              <ProductCard key={product.id} product={product} />
+              <ProductCard key={product._id} product={product} />
             )
           })
         }

@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
-import { BasketContext } from "../../context/BasketContext";
-import "./index.scss";
 import { useNavigate } from "react-router-dom";
+import { BasketContext } from "../../context/BasketContext";
 import useFetchData from "../../hooks/UseFetchData";
 import Loading from "../isLoading";
-import Error from "../Error";
+import "./index.scss";
 
 const Basket = () => {
   const { basketArr, setBasketArr } = useContext(BasketContext);
@@ -16,7 +15,7 @@ const Basket = () => {
   });
 
   function modifyCount(isIncrement, item) {
-    const find = basketArr.find((x) => x.id === item.id);
+    const find = basketArr.find((x) => x._id === item._id);
     if (isIncrement) {
       find.count++;
       item.total = item.discountPrice * item.count;
@@ -64,7 +63,7 @@ const Basket = () => {
             <div className="basketWrapper">
               {basketArr &&
                 basketArr.map((item) => (
-                  <div className="basketCard">
+                  <div className="basketCard" key={item._id}>
                     <div className="basketImg">
                       <img src={item.img} alt="" />
                     </div>

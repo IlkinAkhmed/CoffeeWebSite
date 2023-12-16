@@ -14,7 +14,7 @@ const CafenaPopular = () => {
   const { favs, setFavs } = useContext(wishlistContext);
 
   function addWishlist(item) {
-    const find = favs.find((x) => x.id === item.id);
+    const find = favs.find((x) => x._id === item._id);
     if (find) {
       setFavs([...favs]);
       Swal.fire({
@@ -32,7 +32,7 @@ const CafenaPopular = () => {
 
 
   function addBasket(item) {
-    const find = basketArr.find((x) => x.id === item.id)
+    const find = basketArr.find((x) => x._id === item._id)
     if (find) {
       find.count++
       find.total = find.discountPrice * find.count
@@ -68,7 +68,7 @@ const CafenaPopular = () => {
               .filter((x) => x.status === "popular")
               .map((x) => {
                 return (
-                  <>
+                  <div key={x._id}>
 
                     <div className="popularCard3">
                       <div className="bg"></div>
@@ -99,7 +99,7 @@ const CafenaPopular = () => {
                       </div>
                     </div>
 
-                  </>
+                  </div>
                 );
               })
           )}

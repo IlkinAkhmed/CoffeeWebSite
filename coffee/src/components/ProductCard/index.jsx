@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => {
   const navigate = useNavigate()
 
   function addWishlist(item) {
-    const find = favs.find((x) => x.id === item.id);
+    const find = favs.find((x) => x._id === item._id);
     if (find) {
       setFavs([...favs]);
 
@@ -33,7 +33,7 @@ const ProductCard = ({ product }) => {
   }
 
   function addBasket(item) {
-    const find = basketArr.find((x) => x.id === item.id);
+    const find = basketArr.find((x) => x._id === item._id);
     if (find) {
       find.count++;
       find.total = find.discountPrice * find.count;
