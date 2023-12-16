@@ -80,20 +80,20 @@ const Navbar = () => {
         </div>
         <div className="texts">
           <ul>
-            <li><Link to={"/"} className="side-nav-link">HOME</Link></li>
-            <li><Link to={"/about"} className="side-nav-link">ABOUT</Link></li>
-            <li><Link to={"/menu"} className="side-nav-link">MENU</Link></li>
-            <li><Link to={"/reservation"} className="side-nav-link">RESERVATION</Link></li>
+            <li><Link onClick={() => setIsNavOpen(!isNavOpen)} to={"/"} className="side-nav-link">HOME</Link></li>
+            <li><Link onClick={() => setIsNavOpen(!isNavOpen)} to={"/about"} className="side-nav-link">ABOUT</Link></li>
+            <li><Link onClick={() => setIsNavOpen(!isNavOpen)} to={"/menu"} className="side-nav-link">MENU</Link></li>
+            <li><Link onClick={() => setIsNavOpen(!isNavOpen)} to={"/reservation"} className="side-nav-link">RESERVATION</Link></li>
             <li><Link onClick={() => setIsOpen(!isOpen)} className="side-nav-link opener">SHOP <i className={`fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i></Link>
               <ul className={`shop-texts ${isOpen ? 'active' : ''}`}>
-                <li><Link to={"/shop"} className="side-nav-link">Shop</Link></li>
-                <li><Link className="side-nav-link">Shop Cart</Link></li>
-                <li><Link className="side-nav-link">Shop Details</Link></li>
-                <li><Link className="side-nav-link">Shop Checkout</Link></li>
+                <li><Link onClick={() => setIsNavOpen(!isNavOpen)}  to={"/shop"} className="side-nav-link">Shop</Link></li>
+                <li><Link onClick={() => setIsNavOpen(!isNavOpen)} className="side-nav-link">Shop Cart</Link></li>
+                <li><Link onClick={() => setIsNavOpen(!isNavOpen)} className="side-nav-link">Shop Details</Link></li>
+                <li><Link onClick={() => setIsNavOpen(!isNavOpen)} className="side-nav-link">Shop Checkout</Link></li>
                 <hr />
               </ul>
             </li>
-            <li><Link to={'/contact'} className="side-nav-link">CONTACT</Link></li>
+            <li><Link  onClick={() => setIsNavOpen(!isNavOpen)} to={'/contact'} className="side-nav-link">CONTACT</Link></li>
           </ul>
         </div>
       </div>
