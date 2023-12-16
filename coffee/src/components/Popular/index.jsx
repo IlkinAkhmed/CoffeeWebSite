@@ -3,7 +3,7 @@ import "./index.scss"
 import useFetchData from '../../hooks/UseFetchData'
 
 const Popular = () => {
-  const {data} = useFetchData("popular");
+  const {data} = useFetchData("cafenapopular");
 
   return (
     <section id='popularMenu'>

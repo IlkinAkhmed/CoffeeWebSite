@@ -4,7 +4,7 @@ import useFetchData from '../../hooks/UseFetchData'
 import { Link } from 'react-router-dom'
 
 const News = () => {
-  const { data } = useFetchData('news-Article')
+  const { data } = useFetchData('cafenanewsarticle')
   console.log(data);
   return (
     <section id='news'>
