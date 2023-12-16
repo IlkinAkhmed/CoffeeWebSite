@@ -1,6 +1,6 @@
 const { CafenaBest } = require("../Models/bestModel");
 
-// get all users
+// get all productss
 exports.getAllBest = async (req, res) => {
     try {
         const data = await CafenaBest.find({});
@@ -10,7 +10,7 @@ exports.getAllBest = async (req, res) => {
     }
 }
 
-// get user by id
+// get products by id
 exports.getBestById = async (req, res) => {
     const { id } = req.params;
     try {
@@ -21,7 +21,7 @@ exports.getBestById = async (req, res) => {
     }
 }
 
-// delete user
+// delete products
 exports.deleteBestById = async (req, res) => {
     const { id } = req.params;
     try {
@@ -32,7 +32,7 @@ exports.deleteBestById = async (req, res) => {
     }
 }
 
-// post user
+// post products
 exports.postBest = async (req, res) => {
     try {
         await CafenaBest.create(req.body);
@@ -42,7 +42,7 @@ exports.postBest = async (req, res) => {
     }
 }
 
-// update user
+// update products
 
 exports.updateBestById = async (req, res) => {
     const { id } = req.params;

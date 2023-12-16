@@ -16,10 +16,11 @@ const CafenaPopular = () => {
   function addWishlist(item) {
     const find = favs.find((x) => x._id === item._id);
     if (find) {
-      setFavs([...favs]);
+      setFavs(favs.filter(x => x._id !== item._id));
+
       Swal.fire({
-        title: "Already In Wishlist!!!",
-        icon: "error",
+        title: "Removed from wishlist",
+        icon: "success",
       });
       return;
     }
@@ -74,7 +75,7 @@ const CafenaPopular = () => {
                     <div className="links">
                       <i onClick={() => addBasket(x)} className="fa-solid fa-basket-shopping"></i>
                       <i onClick={() => navigate(`/details/${x._id}`)} className="fa-regular fa-eye"></i>
-                      <i onClick={() => addWishlist(x)} className="fa-regular fa-heart"></i>
+                      <i onClick={() => addWishlist(x)} className={`${favs.find(item => item._id === x._id) ? 'fa-solid' : 'fa-regular'} fa-heart`}></i>
                     </div>
                     <div className="popularImage">
                       <img

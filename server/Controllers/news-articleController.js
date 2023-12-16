@@ -1,6 +1,6 @@
 const { CafenaNewsArticle } = require("../Models/news-articleModel");
 
-// get all users
+// get all productss
 exports.getAllNews = async (req, res) => {
     try {
         const data = await CafenaNewsArticle.find({});
@@ -10,7 +10,7 @@ exports.getAllNews = async (req, res) => {
     }
 }
 
-// get user by id
+// get products by id
 exports.getNewsById = async (req, res) => {
     const { id } = req.params;
     try {
@@ -21,7 +21,7 @@ exports.getNewsById = async (req, res) => {
     }
 }
 
-// delete user
+// delete products
 exports.deleteNewsById = async (req, res) => {
     const { id } = req.params;
     try {
@@ -32,7 +32,7 @@ exports.deleteNewsById = async (req, res) => {
     }
 }
 
-// post user
+// post products
 exports.postNews = async (req, res) => {
     try {
         await CafenaNewsArticle.create(req.body);
@@ -42,7 +42,7 @@ exports.postNews = async (req, res) => {
     }
 }
 
-// update user
+// update products
 
 exports.updateNewsById = async (req, res) => {
     const { id } = req.params;

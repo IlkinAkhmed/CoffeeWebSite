@@ -1,6 +1,6 @@
 const { CafenaMenu } = require("../Models/menuModel");
 
-// get all users
+// get all productss
 exports.getAllMenus = async (req, res) => {
     try {
         const data = await CafenaMenu.find({});
@@ -10,7 +10,7 @@ exports.getAllMenus = async (req, res) => {
     }
 }
 
-// get user by id
+// get products by id
 exports.getMenuById = async (req, res) => {
     const { id } = req.params;
     try {
@@ -21,7 +21,7 @@ exports.getMenuById = async (req, res) => {
     }
 }
 
-// delete user
+// delete products
 exports.deleteMenuById = async (req, res) => {
     const { id } = req.params;
     try {
@@ -32,7 +32,7 @@ exports.deleteMenuById = async (req, res) => {
     }
 }
 
-// post user
+// post products
 exports.postMenu = async (req, res) => {
     try {
         await CafenaMenu.create(req.body);
@@ -42,7 +42,7 @@ exports.postMenu = async (req, res) => {
     }
 }
 
-// update user
+// update products
 
 exports.updateMenuById = async (req, res) => {
     const { id } = req.params;

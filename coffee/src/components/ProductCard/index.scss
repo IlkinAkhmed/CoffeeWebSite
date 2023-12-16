@@ -54,12 +54,10 @@
             opacity: 0.8;
             cursor: pointer;
             color: #000;
-            transition: 0.5s;
 
             &:hover {
                 background-color: var(--button-bg-color);
                 color: var(--colorMain);
-                transition: 0.5s;
                 border: 1px solid var(--button-bg-color);
             }
         }
@@ -134,10 +132,21 @@
     }
 
 }
+
 @media screen and (max-width: 568px) {
-    .product-card-second{
+    .swal2-popup {
+        width: 373px;
+        font-size: 10px;
+
+    }
+
+    div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+        width: 70px !important;
+    }
+
+    .product-card-second {
         width: 100%;
-        padding: 50px 20px!important;
+        padding: 50px 20px !important;
     }
 }
 

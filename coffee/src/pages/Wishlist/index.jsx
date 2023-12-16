@@ -17,7 +17,7 @@ function Wishlist() {
     const {data, isLoading, error} = useFetchData("products")
 
     function addBasket(item) {
-        const find = basketArr.find((x) => x.id === item.id);
+        const find = basketArr.find((x) => x._id === item._id);
         if (find) {
             find.count++;
             find.total = find.discountPrice * find.count;
@@ -53,7 +53,7 @@ function Wishlist() {
                         <h1>My Wishlist</h1>
                         <div className="wishWrapper">
                             {favs && favs.map((x) => (
-                                <div className="wishCard">
+                                <div key={x._id} className="wishCard">
                                     <div className="wishImg">
                                         <img src={x.img} alt="" />
                                     </div>
@@ -63,7 +63,7 @@ function Wishlist() {
                                         <p>Price: <span>${x.discountPrice}</span></p>
                                     </div>
                                     <button onClick={() => addBasket(x)} >Add To Cart</button>
-                                    <i onClick={() => setFavs(favs.filter((item) => item.id !== x.id))} className='fa-solid fa-trash-can'></i>
+                                    <i onClick={() => setFavs(favs.filter((item) => item._id !== x._id))} className='fa-solid fa-trash-can'></i>
                                 </div>
         
                             ))}

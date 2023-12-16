@@ -4,21 +4,25 @@
   background-image: url("https://xpressrow.com/html/cafena/cafena/assets/images/bg/pp-bg-3-1.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+
   // background-position: center;
   .container {
     width: 80%;
     margin: auto;
+
     .headtext {
       background-color: var(--button-bg-color);
       padding: 5px 10px;
       border-radius: 5px;
     }
+
     .textAndButton {
       padding: 50px 0;
       width: 100%;
       display: flex;
       justify-content: space-between;
       color: var(--colorMain);
+
       button {
         padding: 10px 20px;
         border-radius: 8px;
@@ -26,6 +30,7 @@
         color: var(--colorMain);
       }
     }
+
     .wrapper {
       width: 100%;
       padding: 0 0 100px 0;
@@ -34,6 +39,7 @@
       justify-content: center;
       gap: 15px;
       background-color: transparent;
+
       .popularCard3 {
         width: 30%;
         min-height: 550px;
@@ -43,14 +49,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
         &:hover .bg {
           opacity: 1;
           transition: 0.5s;
         }
+
         &:hover .links {
           opacity: 1;
           transition: 0.5s;
         }
+
         .bg {
           width: 100%;
           height: 100%;
@@ -62,6 +71,7 @@
           opacity: 0;
           transition: 0.5s;
         }
+
         .links {
           display: flex;
           gap: 10px;
@@ -79,12 +89,14 @@
             z-index: 2;
             cursor: pointer;
             transition: 0.5s;
+
             &:hover {
               background-color: var(--button-bg-color);
               transition: 0.5s;
             }
           }
         }
+
         .popularImage {
           width: 100%;
           height: 80%;
@@ -93,6 +105,7 @@
           justify-content: center;
           z-index: 1;
           position: absolute;
+
           img {
             width: 147px;
             height: 230px;
@@ -100,6 +113,7 @@
             position: static;
           }
         }
+
         .texts {
           height: 20%;
           padding: 0 30px;
@@ -111,8 +125,10 @@
           .fa-star {
             color: var(--button-bg-color);
           }
+
           p {
             color: var(--button-bg-color);
+
             span {
               color: var(--colorMain);
               text-decoration: line-through;
@@ -125,40 +141,57 @@
 }
 
 @media screen and (max-width: 768px) {
-    #popularPoduct{
-      .container{
-        .textAndButton{
-          flex-wrap: wrap;
-          button{
-            width: 200px!important;
-          }
+  .swal2-popup {
+    width: 373px;
+    font-size: 10px;
+
+  }
+
+  div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+    width: 70px !important;
+  }
+
+  #popularPoduct {
+    .container {
+      .textAndButton {
+        flex-wrap: wrap;
+
+        button {
+          width: 200px !important;
         }
       }
-        .wrapper{
-            width: 95%;
-            flex-wrap: wrap;
-            .popularCard3{
-                width: 100%!important;
-                min-height: 420px!important;
-                .popularImage{
-                    height: 70%!important;
-                }
-                .texts{
-                    height: 30% !important;
-                }
-            }
-        }
     }
+
+    .wrapper {
+      width: 95%;
+      flex-wrap: wrap;
+
+      .popularCard3 {
+        width: 100% !important;
+        min-height: 420px !important;
+
+        .popularImage {
+          height: 70% !important;
+        }
+
+        .texts {
+          height: 30% !important;
+        }
+      }
+    }
+  }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    #popularPoduct{
-        .wrapper{
-            width: 90%;
-            flex-wrap: wrap;
-            .popularCard{
-                width: 48%!important;
-                height: 500px;
-            }
-        }
+  #popularPoduct {
+    .wrapper {
+      width: 90%;
+      flex-wrap: wrap;
+
+      .popularCard {
+        width: 48% !important;
+        height: 500px;
+      }
     }
+  }
 }

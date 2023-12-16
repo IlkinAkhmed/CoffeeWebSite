@@ -10,18 +10,18 @@ import { searchContext } from "../../context/searchContext";
 const ProductCard = ({ product }) => {
   const { basketArr, setBasketArr } = useContext(BasketContext);
   const { favs, setFavs } = useContext(wishlistContext);
-  const {isFull} = useContext(searchContext)
+  const { isFull } = useContext(searchContext)
 
   const navigate = useNavigate()
 
   function addWishlist(item) {
     const find = favs.find((x) => x._id === item._id);
     if (find) {
-      setFavs([...favs]);
+      setFavs(favs.filter(x => x._id !== item._id));
 
       Swal.fire({
-        title: "Already In Wishlist!!!",
-        icon: "error",
+        title: "Removed from wishlist",
+        icon: "success",
       });
       return;
     }
@@ -71,7 +71,7 @@ const ProductCard = ({ product }) => {
       <div className="like-basket">
         <i onClick={() => navigate(`/details/${product._id}`)} className="fa-regular fa-eye"></i>
         <i onClick={() => addBasket(product)} className="fa-solid fa-basket-shopping"></i>
-        <i onClick={() => addWishlist(product)} className="fa-regular fa-heart"></i>
+        <i onClick={() => addWishlist(product)} className={`${favs.find(x => x._id === product._id) ? 'fa-solid' : 'fa-regular'} fa-heart`}></i>
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ function Details() {
     if (itemCount > 0) {
       const find = basketArr.find((x) => x._id === item._id);
       if (find) {
-        find.count++;
+        find.count += parseInt(itemCount);
         find.total = find.discountPrice * find.count;
         setBasketArr([...basketArr]);
 
@@ -36,12 +36,12 @@ function Details() {
       });
       const total = item.discountPrice * itemCount;
       setBasketArr([...basketArr, { ...item, count: itemCount, total }]);
-    }else{
-        Swal.fire({
-          title: "Product quantity should be minimum ONE !!!",
-          icon: "error",
-        });
-        return
+    } else {
+      Swal.fire({
+        title: "Product quantity should be minimum ONE !!!",
+        icon: "error",
+      });
+      return
 
     }
   }
