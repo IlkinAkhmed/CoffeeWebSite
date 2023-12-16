@@ -10,7 +10,7 @@ import Loading from "../isLoading";
 function Details() {
   const { itemId } = useParams();
 
-  const { data, isLoading, error } = useFetchData(`Products/${itemId}`);
+  const { data, isLoading, error } = useFetchData(`cafenaproducts/${itemId}`);
 
   const { basketArr, setBasketArr } = useContext(BasketContext);
 
@@ -18,7 +18,7 @@ function Details() {
 
   function addBasket(item, itemCount) {
     if (itemCount > 0) {
-      const find = basketArr.find((x) => x.id === item.id);
+      const find = basketArr.find((x) => x._id === item._id);
       if (find) {
         find.count++;
         find.total = find.discountPrice * find.count;
@@ -82,18 +82,6 @@ function Details() {
                   ADD TO CART
                 </button>
               </div>
-              {/* <div className="det-categ">
-                <p>CATEGORY:</p>
-                <p style={{ color: "gray" }}>{data.category}</p>
-              </div> */}
-              {/* <div className="det-sku">
-                <p>SKU:</p>
-                <p style={{ color: "gray" }}>2584-MK63</p>
-              </div>
-              <div className="det-brand">
-                <p>BRAND:</p>
-                <p style={{ color: "gray" }}>BRENDA</p>
-              </div> */}
             </div>
           </div>
         </div>

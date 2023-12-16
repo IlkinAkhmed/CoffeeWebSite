@@ -69,7 +69,7 @@ const ProductCard = ({ product }) => {
         </h5>
       </div>
       <div className="like-basket">
-        <i onClick={() => navigate(`/details/${product.id}`)} className="fa-regular fa-eye"></i>
+        <i onClick={() => navigate(`/details/${product._id}`)} className="fa-regular fa-eye"></i>
         <i onClick={() => addBasket(product)} className="fa-solid fa-basket-shopping"></i>
         <i onClick={() => addWishlist(product)} className="fa-regular fa-heart"></i>
       </div>

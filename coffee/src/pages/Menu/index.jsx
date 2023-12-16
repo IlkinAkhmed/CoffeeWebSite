@@ -7,7 +7,7 @@ import Loading from '../isLoading';
 import Error from '../Error';
 
 const Menu = () => {
-  const { data, isLoading, error } = useFetchData("menu");
+  const { data, isLoading, error } = useFetchData("cafenamenus");
   const { category, setCategory } = useContext(searchContext)
 
   return (
@@ -44,7 +44,7 @@ const Menu = () => {
         {data
           .filter((item) => item.category === category || category === 'All')
           .map((item) => (
-            <div key={item.id} className="popularCard2">
+            <div key={item._id} className="popularCard2">
               <div className="bg-animation"></div>
               <img src={item.img} alt="" />
               <div className="details">
